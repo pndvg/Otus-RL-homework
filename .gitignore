@@ -214,3 +214,9 @@ results/models/*
 !results/models/.gitkeep
 results/plots/*
 !results/plots/.gitkeep
+
+# Trained agents and training artifacts
+trained_agent.pkl
+training_results.png
+*.pkl
+*.png
