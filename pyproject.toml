@@ -1,0 +1,14 @@
+[project]
+name = "otus-rl-homework"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "gymnasium>=1.2.2",
+    "jupyter>=1.1.1",
+    "matplotlib>=3.10.7",
+    "numpy>=2.3.5",
+    "pytest>=9.0.1",
+    "ruff>=0.14.6",
+]
