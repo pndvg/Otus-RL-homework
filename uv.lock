@@ -479,6 +479,16 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/c7/53/39cd8c2f85e213fce1f32367c4bdbd3402d3bcde7d0826a1172a0f2c5cc0/gymnasium-1.2.2-py3-none-any.whl", hash = "sha256:f04ec362b1fdf73a8b327db5ef89384a3f2ba411e05d3521513414fbbb2199c8", size = 952118 },
 ]
 
+[package.optional-dependencies]
+box2d = [
+    { name = "box2d-py" },
+    { name = "pygame" },
+    { name = "swig" },
+]
+toy-text = [
+    { name = "pygame" },
+]
+
 [[package]]
 name = "h11"
 version = "0.16.0"
@@ -1388,22 +1398,28 @@ name = "otus-rl-homework"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
-    { name = "gymnasium" },
+    { name = "gymnasium", extra = ["box2d", "toy-text"] },
+    { name = "ipykernel" },
     { name = "jupyter" },
     { name = "matplotlib" },
     { name = "numpy" },
     { name = "pytest" },
     { name = "ruff" },
+    { name = "torch" },
+    { name = "tqdm" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "gymnasium", specifier = ">=1.2.2" },
+    { name = "gymnasium", extras = ["box2d", "toy-text"], specifier = ">=1.2.2" },
+    { name = "ipykernel", specifier = ">=7.1.0" },
     { name = "jupyter", specifier = ">=1.1.1" },
     { name = "matplotlib", specifier = ">=3.10.7" },
     { name = "numpy", specifier = ">=2.3.5" },
     { name = "pytest", specifier = ">=9.0.1" },
     { name = "ruff", specifier = ">=0.14.6" },
+    { name = "torch", specifier = ">=2.0.0" },
+    { name = "tqdm", specifier = ">=4.67.1" },
 ]
 
 [[package]]
