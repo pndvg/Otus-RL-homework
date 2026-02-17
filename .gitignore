@@ -220,3 +220,5 @@ trained_agent.pkl
 training_results.png
 *.pkl
 *.png
+*.pth
+*.pth
